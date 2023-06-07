@@ -25,10 +25,9 @@ body {
     box-sizing: border-box;
     height: auto;
     background: #F1FDFF url("../img/medium-shot-woman-holding-ukranian-flag-1.png") no-repeat right top ;
-    padding: 63px 84px 148px 100px;
+    padding: 4.4% 5.8% 10.3% 6.9%;
 }
 .header-nav-panel{
-    height: 65px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -37,15 +36,14 @@ body {
 .header-nav-panel-logo{
     width: 65px;
     height: 64px;
-
 }
 
 .header-nav-panel-title {
     width: 600px;
-    height: 60px;
+    height: 4.9%;
 }
 .header-nav-panel-title ul {
-    width: 370px;
+    width: 60%;
     height: 18px;
 }
 .header-nav-panel-title ul, .header-nav-panel-title{
@@ -108,7 +106,7 @@ body {
     box-sizing: border-box;
     width: 100%;
     background: #FFFFFF;
-    padding: 145px 100px 140px;
+    padding: 10% 6.9% 9.72%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -149,8 +147,8 @@ body {
     width: 60%;
 }
 .main-program {
-    margin-bottom: 71px;
-    margin-top: 70px;
+    margin-bottom: 4.93%;
+    margin-top: 4.9%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -163,15 +161,16 @@ body {
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
-    padding: 40px;
+    padding: 3.3%;
     width: 100%;
     height: auto;
 }
 .main-program-box img {
-    width: 585px;
+    width: 47%;
     border-radius: 10px;
 }
 .main-program-box--info{
+    width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -226,16 +225,15 @@ body {
     color: #000000;
 }
 .about-gift{
-box-sizing: border-box;
-    width: 1240px;
-    height: auto;
+    width: 100%;
+    box-sizing: border-box;
     background: url("../img/fon-karak.png") no-repeat top left;
     position: relative;
-    margin-top: 45px;
+    margin-top: 3.7%;
 }
 .about-gift-text{
-    margin-top: 270px;
-    margin-bottom: 190px;
+    margin-top: 22%;
+    margin-bottom: 15.3%;
     display: flex;
     align-items: center;
     height: 277px;
@@ -245,7 +243,6 @@ box-sizing: border-box;
 .about-gift-text p{
     margin-left: 40px;
     width: 391px;
-    height: 99px;
     font-style: normal;
     font-weight: 400;
     font-size: 27px;
@@ -254,14 +251,15 @@ box-sizing: border-box;
 }
 .about-gift-photo{
     position: absolute;
-    top: 190px;
-    right: 190px;
+    width: 35%;
+    top: 25.2%;
+    right: 9.2%;
 }
 
 .main-about-money {
     display: flex;
     flex-direction: column;
-    padding: 70px 100px 0;
+    padding: 5.65% 8.06% 0;
     margin: 0 auto;
 }
 .main-about-money-title {
@@ -285,7 +283,7 @@ box-sizing: border-box;
 }
 .main-about-money-ourgoal {
     margin-bottom: 17px;
-    margin-top: 77px;
+    margin-top: 7.5%;
     font-style: normal;
     font-weight: 400;
     font-size: 27px;
@@ -338,7 +336,7 @@ box-sizing: border-box;
     box-sizing: border-box;
     background: #F9FADF;
     height: auto;
-    padding: 57px 100px 115px ;
+    padding: 4% 6.96% 8%;
 }
 .footer-contact {
     display: flex;
@@ -416,21 +414,21 @@ box-sizing: border-box;
     height: auto;
     width: 100%;
     flex-wrap: wrap;
-    margin: 100px auto 0;
+    margin: 8.1% auto 0;
     padding-top: 55px;
 }
 .mail-photo {
-    width: 508px;
-    height: 348px;
+    width: 41%;
 }
 .right-box {
-    width: 506px;
+    width:41%;
     display: flex;
     flex-direction: column;
-    margin-right: 95px;
-    margin-bottom: 55px;
+    margin-right: 7.7%;
+    margin-bottom: 4.4%;
 }
 .right-box-text {
+    text-align: justify;
     font-style: normal;
     font-weight: 400;
     font-size: 27px;
@@ -458,11 +456,10 @@ box-sizing: border-box;
     font-weight: 400;
     font-size: 20px;
     line-height: 120%;
-     color: #000000;
+    color: #000000;
 }
 
 .form-button {
-    width: 100%;
     height: 66px;
     padding: 10px;
     background: #7AE5FD;
@@ -476,3 +473,6 @@ box-sizing: border-box;
     text-transform: uppercase;
     color: #000000
 }
+@media screen and (max-width: 720px) {
+
+    }
