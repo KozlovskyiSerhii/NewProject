@@ -4,15 +4,18 @@ button, a {
     cursor: pointer;
 }
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     scroll-behavior: smooth;
     width: 100%;
-    max-width: 1440px;
     height: auto;
-    margin: 0 auto;
-    background-color: #F5F5F5;
+    background-color: #ffffff;
     font-family: 'Montserrat', sans-serif;
 }
 .box {
+    overflow: hidden;
+    box-sizing: border-box;
     height: auto;
     width: 100%;
     display: flex;
@@ -24,7 +27,8 @@ body {
     width: 100%;
     box-sizing: border-box;
     height: auto;
-    background: #F1FDFF url("../img/medium-shot-woman-holding-ukranian-flag-1.png") no-repeat right top ;
+    background: #F1FDFF url("../img/medium-shot-woman-holding-ukranian-flag-1.png") ;
+    background-size: cover;
     padding: 4.4% 5.8% 10.3% 6.9%;
 }
 .header-nav-panel{
@@ -32,19 +36,21 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
 }
 .header-nav-panel-logo{
     width: 65px;
     height: 64px;
 }
-
 .header-nav-panel-title {
-    width: 600px;
+    margin-left: 20px;
+    width: 52%;
     height: 4.9%;
 }
 .header-nav-panel-title ul {
-    width: 60%;
+    width: 65%;
     height: 18px;
+    gap: 10px;
 }
 .header-nav-panel-title ul, .header-nav-panel-title{
     display: flex;
@@ -63,8 +69,6 @@ body {
     font-size: 18px;
     line-height: 98%;
     text-decoration: none;
-    display: flex;
-
 }
 .btn-1{
     background-color: #7AE5FD;
@@ -76,31 +80,220 @@ body {
     text-transform: uppercase;
     color: #000000;
     text-align: center;
+    margin: 0 0 0 24px;
 }
 .header-info {
-    width: 49%;
+    width: 100%;
     height: auto;
-    margin-top: 75px;
+    margin-top: 6%;
 }
 .header-info h1 {
+    width: 60%;
     font-weight: 800;
     font-size: 93px;
     line-height: 94.9%;
     letter-spacing: -0.02em;
     text-transform: uppercase;
     color: #9AD2DE;
-    width: 700px;
-    height: 265px;
-    margin-bottom: 65px;
+    margin-bottom: 10.5%;
 }
 .header-info p {
-    width: 80%;
+    width: 40%;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 120%;
     color: #000000;
 }
+.header-nav-panel-burger {
+    display: none;
+}
+.burger-icon {
+    width: 48px;
+    height: 48px;
+    background: url("../img/svg/burgermenu.svg") no-repeat;
+    margin: 6px 0;
+    cursor: pointer;
+}
+.header-nav-panel-dropdown {
+    display: none;
+    background-color: #b5f0f8;
+    position: absolute;
+    top: 90px;
+    right: 25px;
+    height: 300px;
+    width: 250px;
+}
+.header-nav-panel-dropdown ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0;
+    width: 100%;
+}
+.header-nav-panel-dropdown li {
+    list-style: none;
+    margin-top: 20px;
+}
+.header-nav-panel-dropdown li a {
+    color: #000000;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 98%;
+    text-decoration: none;
+}
+.header-nav-panel-dropdown.show {
+    display: none;
+}
+@media screen and (max-width: 1200px) {
+    .btn-1 {
+        width: 200px;
+    }
+    .header-nav-panel-title {
+        width: 65%;
+    }
+}
+@media screen and (max-width: 992px) {
+    .header {
+        box-sizing: border-box;
+        padding: 3.3% 2%;
+        width: 100%;
+    }
+    .header-info {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .header-info h1 {
+        font-size: 60px;
+    }
+    .header-nav-panel-title ul {
+        width: 60%;
+        margin-right: 10px;
+    }
+    .header-nav-panel {
+        width: 100%;
+    }
+    .header-nav-panel-title {
+        width: 70%;
+        justify-content: right;
+    }
+    .btn-1 {
+        width: 30%;
+        margin-right: 5px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 3.3% 2%;
+        box-sizing: border-box;
+    }
+    .header-info h1 {
+        font-size: 46px;
+        width: 80%;
+        margin-left: 20px;
+    }
+    .header-info p {
+        margin-left: 20px;
+    }
+    .header-nav-panel-title {
+        width: 90%;
+    }
+    .btn-1 {
+        width: 35%;
+    }
+    .header-info {margin-bottom: 15%}
+}
+@media screen and (max-width: 576px) {
+    .header-info h1 {
+        font-size: 55px;
+    }
+    .header-nav-panel {
+        width: 90%;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .header-nav-panel-title,
+    .header-nav-panel-logo {
+        display: none;
+    }
+
+    .header-nav-panel-burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .header-nav-panel-dropdown.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header-nav-panel-dropdown ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 0;
+        width: 95%;
+    }
+
+    .header-nav-panel-dropdown li {
+        margin-top: 25px;
+
+    }
+    .header-nav-panel-dropdown li a {
+        color: #000000;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 98%;
+        text-decoration: none;
+        letter-spacing: 2px;
+    }
+    .btn-1{
+        width: 80%;
+        margin: 0 0 20px 0;
+    }
+}
+@media screen and (max-width: 391px) {
+    .header-nav-panel-dropdown {
+        top: 65px;
+        right: 10px;
+    }
+    .header {
+        height: 730px;
+        padding: 3.3% 2%;
+        box-sizing: border-box;
+        background: #F1FDFF url(../img/medium-shot-woman-holding-ukranian-flag-for-phone.png) no-repeat bottom;
+        background-size: 100%;
+    }
+    .header-info h1 {
+        width: 95%;
+        font-weight: 800;
+        font-size: 50px;
+        line-height: 94.9%;
+        margin: 0;
+    }
+    .header-info p {
+        width: 350px;
+        font-size: 16px;
+        line-height: 120%;
+        margin: 35px 0 0 0;
+    }
+.header-info {
+    justify-content: center;
+    align-items: center;
+}
+}
+
+
+
+
+
 .main {
     margin: 0 auto;
     box-sizing: border-box;
@@ -156,17 +349,17 @@ body {
     gap: 65px;
 }
 .main-program-box {
+    width: 100%;
     flex-wrap: wrap;
     background: #F1FDFF;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
     padding: 3.3%;
-    width: 100%;
     height: auto;
 }
 .main-program-box img {
-    width: 47%;
+    width: 53%;
     border-radius: 10px;
 }
 .main-program-box--info{
@@ -187,7 +380,7 @@ body {
     color: #000000;
 }
 .info-title-h3 {
-    width: 80%;
+    width: 95%;
 }
 .info-title p{
     margin-top: 10px;
@@ -236,13 +429,13 @@ body {
     margin-bottom: 15.3%;
     display: flex;
     align-items: center;
-    height: 277px;
+    padding: 7.5% 0;
     background: #F2FEFF;
     border-radius: 10px;
 }
 .about-gift-text p{
     margin-left: 40px;
-    width: 391px;
+    width: 31%;
     font-style: normal;
     font-weight: 400;
     font-size: 27px;
@@ -260,7 +453,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 5.65% 8.06% 0;
-    margin: 0 auto;
+    align-items: center;
 }
 .main-about-money-title {
     margin: 0 auto;
@@ -292,13 +485,11 @@ body {
     color: #000000;
 }
 .counter-box {
-    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 345px;
-    height: 75px;
+    width: 50%;
 }
 .counter-box-text {
     font-style: normal;
@@ -317,7 +508,7 @@ body {
     margin: 0 13px;
 }
 .btn-3{
-    margin: 80px auto 0;
+    margin: 12% auto 0;
     width: 275px;
     height: 65px;
     background: #7AE5FD;
@@ -330,8 +521,241 @@ body {
     color: #000000;
 }
 
+@media screen and (max-width: 992px) {
+    .info-title h3 {
+        width: 95%;
+        margin: 0;
+    }
+    .main {
+        padding: 5% 6%;
+    }
+    }
+@media screen and (max-width: 768px) {
+
+    .main-program-box img {
+        width: 80%;
+        margin: 0 0 30px 0;
+    }
+
+    .main-title {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-title h2 {
+        font-size: 40px;
+        line-height: 120%;
+        margin-bottom: 20px;
+    }
+
+    .main-title-scene {
+        font-size: 27px;
+        line-height: 120%;
+        text-align: center;
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .main-title-place {
+        width: 80%;
+    }
+
+    .main-program {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .main-program-box {
+        align-items: center;
+        flex-direction: column-reverse;
+        justify-content: center;
+
+    }
+
+    .main-program-box--info {
+        width: 90%;
+        margin-left: 20px;
+        flex-direction: column;
+    }
+
+    .info-title h3 {
+        font-size: 46px;
+        line-height: 120%;
+    }
+
+    .info-title-h3 {
+        width: 95%;
+    }
+
+    .info-title > p {
+        font-size: 20px;
+        margin-top: 15px;
+    }
+
+    .about-gift-text {
+        width: 100%;
+    }
+.about-gift {
+    background-image: none;
+}
+    .about-gift-text p {
+        width: 55%;
+    }
+    .about-gift-photo {
+        top: 27.2%;
+        right: 9.2%;
+    }
+}
+@media screen and (max-width: 576px) {
+    .about-gift-photo {
+        width: 40%;
+        top: 30.2%;
+        right: 0;
+    }
+.main-title h2 {
+    text-align: center;
+    width: 100%;
+    font-size: 36px;
+    margin-top: 15px;
+}
+    .about-gift-text p {
+        width: 60%;
+        margin: 0 0 0 5px;
+    }
+
+    .main-about-money {
+        padding: 0;
+    }
+    .main-about-money-title{
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+    .main-about-money-text {
+        letter-spacing: 0.002em;
+    }
+    .counter-box {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 391px) {
+    .main {
+        padding: 0 19px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+.main-program-box img {
+    width: 96%;
+}
+    .main-title {
+        width: 351px;
+    }
+    .main-title h2 {
+        width: 100%;
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 94.9%;
+        margin-top: 100px;
+    }
+    .main-title-scene {
+        width: 100%;
+        font-size: 20px;
+        margin: 14px 0 20px 0;
+    }
+    .main-title-place {
+        width: 100%;
+        margin-bottom: 55px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        color: #73A6B1;
+    }
+    .main-program-box--info {
+        width: 322px;
+        height: 455px;
+    }
+.info-title h3 {
+    font-size: 30px;
+    line-height: 94.9%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+}
+    .info-title p {
+        font-size: 20px;
+        line-height: 120%;
+    }
+    .info-box-text {
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 120%
+    }
+    .info-box-time {
+        font-size: 16px;
+        line-height: 120%;
+        color: #3D8C9D;
+    }
+    .about-gift {
+        height: auto;
+        display: flex;
+    flex-direction: column-reverse;
+
+    }
+    .about-gift-text {
+        width: 100%;
+    }
+    .about-gift-text p {
+width: 100%;
+        text-align: center;
+    }
+
+.btn-2 {
+    display: none;
+}
+.about-gift-photo {
+    position: static;
+    width: 337px;
+}
+    .main-about-money {
+        padding: 0;
+        margin-bottom: 65px;
+    }
+    .main-about-money-title{
+        font-size: 50px;
+        line-height: 94.9%;
+        margin-bottom: 17px;
+        text-align: start;
+    }
+    .main-about-money-text {
+        font-size: 16px;
+        color: #73A6B1;
+        margin-bottom: 85px;
+    }
+
+    .main-about-money-ourgoal {
+        font-size: 20px;
+        line-height: 120%;
+        text-align: center;
+        width: 100%;
+    }
+    .main-about-money-text {
+        letter-spacing: 0.002em;
+    }
+    .counter-box {
+        width: 90%;
+    }
+    .counter-box-text {
+        font-size: 60px;
+        line-height: 94.9%;
+        text-align: center;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+    }
+}
+
 .footer {
-    margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
     background: #F9FADF;
@@ -415,7 +839,7 @@ body {
     width: 100%;
     flex-wrap: wrap;
     margin: 8.1% auto 0;
-    padding-top: 55px;
+    padding-top: 5%;
 }
 .mail-photo {
     width: 41%;
@@ -473,6 +897,214 @@ body {
     text-transform: uppercase;
     color: #000000
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
+    .footer {
+        width: 100%;
+        box-sizing: border-box;
+        background: #F9FADF;
+        height: auto;
+        padding: 4% 6.96% 8%;
+    }
+    .footer-contact {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .footer-contact--title {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 120%;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: #000000;
+        width: 35%;
+    }
+    .footer-contact-info {
 
     }
+    .footer-contact-info--top {
+
+    }
+    .footer-contact-info--tel {
+        width: 33px;
+        height: 32px;
+        margin-bottom: 10px;
+    }
+    .footer-contact-info-question {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 120%;
+        color: #000000;
+        width: 75%;
+    }
+    .footer-contact-info--number a{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 120%;
+        color: #000000;
+        text-decoration: none;
+    }
+    .footer-contact-bot {
+        display: flex;
+        flex-direction: row;
+        margin-top: 57px;
+        margin-bottom: 5px;
+    }
+    .footer-contact-bot-telegram {
+        width: 33px;
+        height: 33px;
+    }
+    .footer-contact-bot-whatsapp {
+        margin-left: 15px;
+        width: 33px;
+        height: 32px;
+    }
+    .footer-contact-bot--text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 120%;
+        color: #000000;
+    }
+
+    .registration-form {
+
+        flex-direction: column;
+
+    }
+    .mail-photo {
+        width: 41%;
+    }
+    .right-box {
+        width:41%;
+        display: flex;
+        flex-direction: column;
+        margin-right: 7.7%;
+        margin-bottom: 4.4%;
+    }
+    .right-box-text {
+        text-align: justify;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 27px;
+        line-height: 120%;
+        color: #000000;
+        margin-bottom: 40px;
+    }
+    .form-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 31px;
+    }
+
+    .form-input {
+        box-sizing: border-box;
+        width: 100%;
+        height: 66px;
+        padding: 21px 0 21px 43px;
+        background: #F9FADF;
+        border-radius: 61px;
+        border: none;
+        outline:none;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 120%;
+        color: #000000;
+    }
+
+    .form-button {
+        height: 66px;
+        padding: 10px;
+        background: #7AE5FD;
+        border-radius: 61px;
+        border: none;
+        cursor: pointer;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 120%;
+        text-transform: uppercase;
+        color: #000000
+    }
+}
+@media screen and (max-width: 768px) {
+    .registration-form {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .form-container {
+        width: 95%;
+    }
+    .mail-photo {
+        width: 350px;
+    }
+    .right-box {
+        width: 100%;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .right-box-text {
+        width: 100%;
+        font-size: 20px;
+        line-height: 120%
+    }
+}
+    @media screen and (max-width: 391px) {
+    .footer {
+        padding: 3% 5%;
+        margin-bottom: 72px;
+    }
+    .footer-contact {
+        flex-direction: column;
+    }
+    .footer-contact--title {
+        width: 100%;
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 94.9%;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        margin-top: 70px;
+        margin-bottom: 45px;
+    }
+    .footer-contact-info-question, .footer-contact-info--number {
+        width: 100%;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+    }
+    .footer-contact-bot--text {
+        margin-bottom: 95px;
+    }
+    .registration-form {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .form-container {
+        width: 95%;
+    }
+    .mail-photo {
+        width: 350px;
+    }
+    .right-box {
+        width: 100%;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .right-box-text {
+        width: 100%;
+        font-size: 20px;
+        line-height: 120%
+    }
+}
+
