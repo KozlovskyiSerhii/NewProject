@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Tourney:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-button {
+button, a {
     border: none;
     cursor: pointer;
 }
 body {
+    scroll-behavior: smooth;
     width: 100%;
     max-width: 1440px;
     height: auto;
@@ -11,7 +12,16 @@ body {
     background-color: #F5F5F5;
     font-family: 'Montserrat', sans-serif;
 }
+.box {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .header {
+    margin: 0 auto;
+    width: 100%;
     box-sizing: border-box;
     height: auto;
     background: #F1FDFF url("../img/medium-shot-woman-holding-ukranian-flag-1.png") no-repeat right top ;
@@ -94,6 +104,9 @@ body {
     color: #000000;
 }
 .main {
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
     background: #FFFFFF;
     padding: 145px 100px 140px;
     height: auto;
@@ -138,7 +151,6 @@ body {
 .main-program {
     margin-bottom: 71px;
     margin-top: 70px;
-    width: 1240px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,21 +158,21 @@ body {
     gap: 65px;
 }
 .main-program-box {
+    flex-wrap: wrap;
     background: #F1FDFF;
     border-radius: 10px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     padding: 40px;
     width: 100%;
-
+    height: auto;
 }
 .main-program-box img {
     width: 585px;
     border-radius: 10px;
 }
 .main-program-box--info{
-display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -196,7 +208,7 @@ display: flex;
     line-height: 120%;
 }
 .info-box-text{
-     color: #000000;
+    color: #000000;
 }
 .info-box-time{
     color: #3D8C9D;
@@ -214,14 +226,16 @@ display: flex;
     color: #000000;
 }
 .about-gift{
+box-sizing: border-box;
     width: 1240px;
-    height: 532px;
+    height: auto;
     background: url("../img/fon-karak.png") no-repeat top left;
     position: relative;
     margin-top: 45px;
-    padding: 270px 0px 0px 25px;
 }
 .about-gift-text{
+    margin-top: 270px;
+    margin-bottom: 190px;
     display: flex;
     align-items: center;
     height: 277px;
@@ -242,5 +256,223 @@ display: flex;
     position: absolute;
     top: 190px;
     right: 190px;
-    z-index: 1;
+}
+
+.main-about-money {
+    display: flex;
+    flex-direction: column;
+    padding: 70px 100px 0;
+    margin: 0 auto;
+}
+.main-about-money-title {
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #000000;
+}
+.main-about-money-text {
+    margin-top: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    text-align: center;
+    color: #73A6B1;
+}
+.main-about-money-ourgoal {
+    margin-bottom: 17px;
+    margin-top: 77px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 120%;
+    text-align: center;
+    color: #000000;
+}
+.counter-box {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 345px;
+    height: 75px;
+}
+.counter-box-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #000000;
+}
+.line {
+    width: 3px;
+    height: 62px;
+    background-color: #9AD2DE;
+    margin: 0 13px;
+}
+.btn-3{
+    margin: 80px auto 0;
+    width: 275px;
+    height: 65px;
+    background: #7AE5FD;
+    border-radius: 87px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.footer {
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    background: #F9FADF;
+    height: auto;
+    padding: 57px 100px 115px ;
+}
+.footer-contact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.footer-contact--title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #000000;
+    width: 35%;
+}
+.footer-contact-info {
+
+}
+.footer-contact-info--top {
+
+}
+.footer-contact-info--tel {
+    width: 33px;
+    height: 32px;
+    margin-bottom: 10px;
+}
+.footer-contact-info-question {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: #000000;
+    width: 75%;
+}
+.footer-contact-info--number a{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: #000000;
+    text-decoration: none;
+}
+.footer-contact-bot {
+    display: flex;
+    flex-direction: row;
+    margin-top: 57px;
+    margin-bottom: 5px;
+}
+.footer-contact-bot-telegram {
+    width: 33px;
+    height: 33px;
+}
+.footer-contact-bot-whatsapp {
+    margin-left: 15px;
+    width: 33px;
+    height: 32px;
+}
+.footer-contact-bot--text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: #000000;
+}
+
+.registration-form {
+    background: #FFFFFF;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 100px auto 0;
+    padding-top: 55px;
+}
+.mail-photo {
+    width: 508px;
+    height: 348px;
+}
+.right-box {
+    width: 506px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 95px;
+    margin-bottom: 55px;
+}
+.right-box-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27px;
+    line-height: 120%;
+    color: #000000;
+    margin-bottom: 40px;
+}
+.form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+}
+
+.form-input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 66px;
+    padding: 21px 0 21px 43px;
+    background: #F9FADF;
+    border-radius: 61px;
+    border: none;
+    outline:none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+     color: #000000;
+}
+
+.form-button {
+    width: 100%;
+    height: 66px;
+    padding: 10px;
+    background: #7AE5FD;
+    border-radius: 61px;
+    border: none;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #000000
 }
