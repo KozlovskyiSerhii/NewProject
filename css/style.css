@@ -192,7 +192,7 @@ body {
     }
     .header-info h1 {
         font-size: 46px;
-        width: 80%;
+        width: 70%;
         margin-left: 20px;
     }
     .header-info p {
@@ -208,7 +208,13 @@ body {
 }
 @media screen and (max-width: 576px) {
     .header-info h1 {
-        font-size: 55px;
+        width: 100%;
+        font-size: 50px;
+        margin: 0;
+        text-align: left;
+    }
+    .header-info p {
+       width: 70%;
     }
     .header-nav-panel {
         width: 90%;
@@ -598,6 +604,7 @@ body {
     }
 .about-gift {
     background-image: none;
+    overflow: hidden;
 }
     .about-gift-text p {
         width: 55%;
@@ -698,6 +705,8 @@ body {
         color: #3D8C9D;
     }
     .about-gift {
+
+        overflow: hidden;
         height: auto;
         display: flex;
     flex-direction: column-reverse;
@@ -994,6 +1003,7 @@ width: 100%;
         line-height: 120%;
         color: #000000;
         margin-bottom: 40px;
+
     }
     .form-container {
         width: 100%;
@@ -1052,9 +1062,10 @@ width: 100%;
         align-items: center;
     }
     .right-box-text {
-        width: 100%;
+        width: 90%;
         font-size: 20px;
-        line-height: 120%
+        line-height: 120%;
+
     }
 }
     @media screen and (max-width: 391px) {
